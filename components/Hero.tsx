@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { PlayCircle } from 'lucide-react';
-import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -32,14 +31,12 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link href="/signup">
-            <Button
-              size="lg"
-              className="bg-[#f97316] hover:bg-[#ea580c] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              Start Your Journey
-            </Button>
-          </Link>
+          <Button
+            size="lg"
+            className="bg-[#f97316] hover:bg-[#ea580c] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            Start Your Journey
+          </Button>
 
           <Button
             variant="ghost"

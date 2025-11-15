@@ -69,14 +69,12 @@ export default function Navigation() {
               </Button>
             </Link>
 
-            <Link href="/signup">
-              <Button
-                size="sm"
-                className="bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full"
-              >
-                Get Started
-              </Button>
-            </Link>
+            <Button
+              size="sm"
+              className="bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full"
+            >
+              Get Started
+            </Button>
           </div>
 
           <button
@@ -116,11 +114,9 @@ export default function Navigation() {
                   Sign In
                 </Button>
               </Link>
-              <Link href="/signup" className="w-full">
-                <Button size="sm" className="w-full bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full">
-                  Get Started
-                </Button>
-              </Link>
+              <Button size="sm" className="w-full bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full">
+                Get Started
+              </Button>
             </div>
           </div>
         </div>
