@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function FinalCTA() {
   return (
@@ -18,13 +19,15 @@ export default function FinalCTA() {
           Join thousands of digital nomads who are already living their best lives.
         </p>
 
-        <Button
-          size="lg"
-          className="bg-[#f97316] hover:bg-[#ea580c] text-white px-10 py-7 text-lg rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
-        >
-          Create Your Free Account
-          <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-        </Button>
+        <Link href="/signup">
+          <Button
+            size="lg"
+            className="bg-[#f97316] hover:bg-[#ea580c] text-white px-10 py-7 text-lg rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+          >
+            Create Your Free Account
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </Link>
       </div>
     </section>
   );
