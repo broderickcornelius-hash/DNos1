@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Compass, Menu, X } from 'lucide-react';
-import Link from 'next/link';
 
 const navLinks = [
   { label: 'Jobs', href: '#jobs' },
@@ -32,7 +31,7 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <Compass className={`w-8 h-8 ${isScrolled ? 'text-[#0f766e]' : 'text-white'}`} />
             <span
               className={`text-2xl font-bold font-poppins ${
@@ -41,7 +40,7 @@ export default function Navigation() {
             >
               NomadGate
             </span>
-          </Link>
+          </div>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -56,18 +55,16 @@ export default function Navigation() {
               </a>
             ))}
 
-            <Link href="/login">
-              <Button
-                size="sm"
-                className={`rounded-full transition-all duration-300 ${
-                  isScrolled
-                    ? 'bg-[#0f766e] hover:bg-[#0d6561] text-white'
-                    : 'bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm'
-                }`}
-              >
-                Sign In
-              </Button>
-            </Link>
+            <Button
+              size="sm"
+              className={`rounded-full transition-all duration-300 ${
+                isScrolled
+                  ? 'bg-[#0f766e] hover:bg-[#0d6561] text-white'
+                  : 'bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm'
+              }`}
+            >
+              Sign In
+            </Button>
 
             <Button
               size="sm"
@@ -105,15 +102,13 @@ export default function Navigation() {
               </a>
             ))}
             <div className="flex flex-col gap-2 pt-4">
-              <Link href="/login" className="w-full">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="w-full rounded-full border-[#0f766e] text-[#0f766e] hover:bg-[#0f766e] hover:text-white"
-                >
-                  Sign In
-                </Button>
-              </Link>
+              <Button
+                size="sm"
+                variant="outline"
+                className="w-full rounded-full border-[#0f766e] text-[#0f766e] hover:bg-[#0f766e] hover:text-white"
+              >
+                Sign In
+              </Button>
               <Button size="sm" className="w-full bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full">
                 Get Started
               </Button>
